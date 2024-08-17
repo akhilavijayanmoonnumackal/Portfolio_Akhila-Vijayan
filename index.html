@@ -70,7 +70,7 @@
 								<div class="overlay overlay-bg"></div>
 								<img class="image img-fluid" src="images/chat_app.png" alt="">
 							</div>
-				                                  -->
+				                                
 						</div>
 						<div class="p-inner">
 							<h4>Live Chat</h4>
@@ -83,7 +83,7 @@
 								<div class="overlay overlay-bg"></div>
 								<img class="image img-fluid" src="images/cozastore.png" alt="">
 							</div>
-							                                  -->
+							                                 
 						</div>
 						<div class="p-inner">
 							<h4>Cozastore</h4>
@@ -109,7 +109,7 @@
 								<div class="overlay overlay-bg"></div>
 								<img class="image img-fluid" src="images/Todo.png" alt="">
 							</div>
-						                               -->
+						                             
 						</div> 
 						<div class="p-inner">
 							<h4>ToDo App</h4>
@@ -267,7 +267,7 @@
 				</div>
 
 				<div class="col-md-7 mb-5 mb-md-0">
-					<form action="" class="site-form">
+					<form action="" class="site-form" onsubmit="return validateForm()">
 						<h3 class="mb-5">Get In Touch</h3>
 						<script src="index.js"></script>
 					<script type="text/javascript"
@@ -279,6 +279,69 @@
 							publicKey: "bqiUYO45ltszz34RX",
 						});
 					})();
+
+					function validateForm() {
+                let isValid = true;
+
+                // Clear previous error messages
+                document.querySelectorAll('.error-message').forEach(el => el.remove());
+
+                // Validate Name
+                const name = document.getElementById('name').value.trim();
+                const nameRegex = /^[A-Za-z\s]+$/; 
+				if (name === "") {
+					showError('name', 'Name is mandatory');
+					isValid = false;
+				} else if (!nameRegex.test(name)) {
+					showError('name', 'Name can only contain letters and spaces');
+					isValid = false;
+				}
+
+                // Validate Email
+                const email = document.getElementById('email').value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (email === "") {
+                    showError('email', 'Email is mandatory');
+                    isValid = false;
+                } else if (!emailRegex.test(email)) {
+                    showError('email', 'Invalid email format');
+                    isValid = false;
+                }
+
+                // Validate Phone
+                const phone = document.getElementById('phone').value.trim();
+                const phoneRegex = /^[0-9]{10}$/;
+                if (phone === "") {
+                    showError('phone', 'Phone is mandatory');
+                    isValid = false;
+                } else if (!phoneRegex.test(phone)) {
+                    showError('phone', 'Invalid phone format');
+                    isValid = false;
+                }
+
+                // Validate Message
+                const message = document.getElementById('message').value.trim();
+                if (message === "") {
+                    showError('message', 'Message is mandatory');
+                    isValid = false;
+                }
+
+                if (isValid) {
+                    sendMail();
+                }
+
+                return false;
+            }
+
+            function showError(fieldId, message) {
+                const field = document.getElementById(fieldId);
+                const errorMessage = document.createElement('div');
+                errorMessage.className = 'error-message';
+                errorMessage.style.color = 'red';
+                errorMessage.style.marginTop = '5px';
+                errorMessage.innerText = message;
+                field.parentNode.appendChild(errorMessage);
+            }
 					</script>
 						<div class="form-group">
 							<input type="text" class="form-control px-3 py-4" placeholder="Your Name" id="name">
@@ -293,7 +356,7 @@
 							<textarea class="form-control px-3 py-4"cols="30" rows="10" placeholder="Write a Message" id="message"></textarea>
 						</div>
 						<div class="form-group">
-							<input type="submit" class="btn btn-primary  px-4 py-3" value="Send Message" onclick="sendMail()">
+							<input type="submit" class="btn btn-primary  px-4 py-3" value="Send Message" >
 						</div>
 					</form>
 				</div>
