@@ -1,0 +1,11 @@
+{
+    "rewrites": [
+        { "source": "/home", "destination": "#section-home"},
+        { "source": "/portfolio", "destination": "#section-portfolio"},
+        { "source": "/resume", "destination": "#section-resume"},
+        { "source": "/contact", "destination": "#section-contact"},
+        { "source": "/about", "destination": "#section-about"}
+
+
+    ]
+}
