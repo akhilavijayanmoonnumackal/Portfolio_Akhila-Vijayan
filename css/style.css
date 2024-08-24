@@ -797,3 +797,77 @@ a {
 .centered-button:hover {
   background-color: #f0f0f0;
 }
+
+#section-resume {
+  position: relative;
+  overflow: hidden;
+}
+
+#background-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; 
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.container {
+  position: relative;
+  z-index: 1; 
+  background-color: transparent; 
+  padding: 20px;
+  border-radius: 10px;
+}
+/* Styling for the section with a background image */
+#section-services {
+  position: relative;
+  overflow: hidden; 
+}
+
+#section-services .background-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/home2.jpg'); 
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  z-index: 1;
+}
+
+#section-services .container {
+  position: relative;
+  z-index: 2; 
+  color: #fff; 
+}
+
+/* Styling for the section with a background image */
+#section-contact {
+  position: relative;
+  overflow: hidden; 
+}
+
+.background-image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/home3.jpg');
+  background-size: cover;
+  background-position: center;
+  opacity: 0.1; 
+  z-index: 1;
+}
+
+#section-contact .container {
+  position: relative;
+  z-index: 2; 
+  color: #fff;
+}

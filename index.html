@@ -135,6 +135,10 @@
 	<!-- .section -->
 
 	<section class="site-section" id="section-resume">
+		<video autoplay muted loop id="background-video">
+			<source src="/images/tech4.mp4" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
 		<div class="container">
 		  <div class="row">
 			<div class="col-md-12 mb-5">
@@ -202,6 +206,13 @@
 		  </div>
 		</div>
 	  </section>
+	  <script>
+		document.addEventListener('DOMContentLoaded', function () {
+			var video = document.getElementById('background-video');
+			video.playbackRate = 0.5;
+		});
+	</script>
+	
 	  
 	<!-- .section -->
 
@@ -230,6 +241,7 @@
 	</section>
 
 	<section class="site-section pb-0" id="section-services">
+		<div class="background-image-overlay"></div>
 		<div class="container">
 			<div class="row mb-4">
 				<div class="col-md-12">
@@ -274,6 +286,7 @@
 	</section>
 
 	<section class="site-section" id="section-contact">
+		<div class="background-image-overlay"></div>
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12 mb-5">
