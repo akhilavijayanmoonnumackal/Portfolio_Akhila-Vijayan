@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ToDo App Project Details</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg site-navbar navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Akhila Portfolio</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <section class="site-section" id="section-project-details" style="margin-top: 30px;">
+        <div class="container">
+            <div class="row">
+                <!-- Image Column -->
+                <div class="col-md-6 col-12">
+                    <img src="images/Todo.png" alt="Live Chat Screenshot" class="img-fluid">
+                    <img src="images/todo3.png" alt="Live Chat Screenshot" class="img-fluid" style="margin-top: 30px;">
+                </div>
+                <!-- Text Column -->
+                <div class="col-md-6 col-12">
+                    <h2 class="text-center">TODO App</h2>
+                    <p style="font-size: small;">This ToDo Application is developed using React. It offers a structured and interactive interface where users can manage tasks with ease. 
+                        Users can add new tasks, mark tasks as done, drop tasks, retrieve dropped tasks, and remove tasks permanently. The application utilizes local storage to save the state of the to-dos, ensuring persistence across sessions.</p>
+                    <h5>Technologies Used</h5>
+                    <ul style="font-size: small;">
+                        <li><strong><b>React:</b></strong> The core JavaScript library used for building the user interface.</li>
+                        <li><strong><b>JavaScript ES6:</b></strong>  Used for writing modern and clean code, utilizing features like arrow functions and destructuring.</li>
+                        <li><strong><b>CSS:</b></strong> Used for styling the application to provide a visually appealing user experience.</li>
+                        <li><strong><b>Font Awesome:</b></strong> Icon library used for incorporating various icons (e.g., checkmark, trash, redo) in the UI.</li>
+                    </ul>
+
+                    <h5>Techniques Implemented</h5>
+                    <ul style="font-size: small;">
+                        <li><strong><b>State Management:</b></strong> Utilizes React's useState hook to manage the state of tasks and input fields.</li>
+                        <li><strong><b>Effect Hook:</b></strong> Uses the useEffect hook to synchronize the tasks' state with localStorage, ensuring that tasks persist across page reloads.</li>
+                        <li><strong><b>Conditional Rendering:</b></strong> The application uses conditional rendering to display tasks in different sections (e.g., Done, On Going, Dropped) based on their status.</li>
+                        <li><strong><b>Local Storage:</b></strong> Data persistence is achieved through local storage, allowing tasks to be saved and retrieved between sessions.</li>
+                        <li><strong><b>Event Handling:</b></strong> Implements various event handlers (e.g., onClick, onChange, onSubmit) to handle user interactions, such as adding, removing, and updating tasks.</li>
+                        <li><strong><b>Dynamic Date and Time:</b></strong> The application displays the current day and uses dynamic time formatting for task timestamps.</li>
+                        <li><strong><b>Confirmation Dialogs:</b></strong> Utilizes window.confirm to prompt the user before permanently deleting or retrieving tasks, ensuring user actions are deliberate.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p>&copy; 2024 Akhila Vijayan. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
