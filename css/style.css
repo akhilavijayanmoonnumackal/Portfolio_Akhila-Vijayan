@@ -874,3 +874,64 @@ a {
   z-index: 2; 
   color: #fff;
 }
+.bodyError {
+  margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/images/404.jpg'); 
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+.bodyError::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  z-index: 0;
+}
+
+.containerError {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  background-color: rgba(28, 26, 26, 0.7); /* Light background for content */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.btnError {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 4px #999;
+}
+
+.btnError-primary {
+  background-color: rgb(186, 201, 100);
+  color: #0f0d0d;
+  transition: background-color 0.3s;
+}
+
+.btnError-primary:hover {
+  background-color: #52dac6;
+}
+
+.btnError-primary:active {
+  background-color: #0056b3;
+  box-shadow: 0 2px #666;
+  transform: translateY(2px);
+}
