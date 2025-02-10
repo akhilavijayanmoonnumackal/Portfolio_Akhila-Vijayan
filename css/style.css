@@ -185,6 +185,10 @@ a {
 .site-section {
   padding: 5em 0; }
 
+.job {
+  text-align: justify;
+}
+
 .section-heading {
   margin-bottom: 30px;
   position: relative;
@@ -204,7 +208,9 @@ a {
 
 .lead {
   font-weight: 200;
-  line-height: 1.5; }
+  line-height: 1.5; 
+  text-align: justify;
+}
 
 .site-service-item {
   background: #333;
