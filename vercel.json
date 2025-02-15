@@ -1,11 +1,24 @@
 {
+    "cleanUrls": true,
     "rewrites": [
+        { "source": "/", "destination": "/index.html" },
+        { "source": "/e-commerce-project-details", "destination": "/e-commerce-project-details.html" },
+        { "source": "/gvg-project-details", "destination": "/gvg-project-details.html" },
+        { "source": "/job-portal-project-details", "destination": "/job-portal-project-details.html" },
+        { "source": "/netflix-project-details", "destination": "/netflix-project-details.html" },
+        { "source": "/todoapp-project-details", "destination": "/todoapp-project-details.html" },
+        { "source": "/vendora-project-details", "destination": "/vendora-project-details.html" },
         { "source": "/home", "destination": "#section-home"},
         { "source": "/portfolio", "destination": "#section-portfolio"},
         { "source": "/resume", "destination": "#section-resume"},
         { "source": "/contact", "destination": "#section-contact"},
         { "source": "/about", "destination": "#section-about"}
 
-
-    ]
+    ],
+    "headers": [
+    {
+      "source": "/css/(.*)",
+      "headers": [{ "key": "Cache-Control", "value": "max-age=31536000" }]
+    }
+  ]
 }
